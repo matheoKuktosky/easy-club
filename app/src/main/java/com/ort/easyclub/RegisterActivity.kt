@@ -57,7 +57,7 @@ class RegisterActivity : AppCompatActivity() {
         val confirmPassword:String = txtConfirmPassword.text.toString()
 
         if(!TextUtils.isEmpty(username) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password) && !TextUtils.isEmpty(confirmPassword)){
-            if(password === confirmPassword){
+            //if(password === confirmPassword){
                 progressBar.visibility=View.VISIBLE
 
                 auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this){
@@ -72,10 +72,10 @@ class RegisterActivity : AppCompatActivity() {
                         action()
                     }
                 }
-            }
-            else{
+           // }
+            /*else{
                 Toast.makeText(this, "La contraseña no coincide!", Toast.LENGTH_LONG).show()
-            }
+            }*/
         }
         else{
             Toast.makeText(this, "Por favor, llene los campos", Toast.LENGTH_LONG).show()
